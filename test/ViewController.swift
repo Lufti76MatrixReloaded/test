@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   @IBOutlet var viewCrtl: UIView!
+    
+    @IBOutlet weak var textLabel: UILabel!
+    
+    @IBOutlet weak var switchButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        switchButton.layer.cornerRadius = 15
     }
 
-
+    @IBAction func switchToText(_ sender: Any) {
+        if textLabel.text == "Hello World"{
+            textLabel.text = "Hallo Welt"
+        } else {
+            textLabel.text = "Hello World"
+        }
+    }
+    
 }
 
